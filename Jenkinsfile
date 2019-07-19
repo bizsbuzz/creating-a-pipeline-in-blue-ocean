@@ -9,6 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
+        cleanWs(deleteDirs: true)
         sh 'npm install'
       }
     }
